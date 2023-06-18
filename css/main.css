@@ -114,7 +114,7 @@ img {
  */
 
 .nav-section {
-  background: hsl(0, 0%, 15%);
+  background: rgb(22, 22, 34);
   position: relative;
   padding-bottom: 2px;
 }
@@ -149,12 +149,12 @@ img {
 
 .nav-menu li a {
   display: block;
-  color: #fff;
+  color: #ffffff;
   padding: 0.7em 1em;
 }
 
 .nav-menu li a:hover {
-  background: hsl(0, 0%, 25%);
+  background: hsla(246, 100%, 75%, 0.199);
 }
 
 .nav-menu li a[href='#more'] {
@@ -229,7 +229,7 @@ img {
 .headline p {
   margin: 0;
   padding: 15px;
-  background: var(--cornell-red);
+  background: rgba(255, 67, 67, 0.719);
   color: var(--anti-flash-white);
   font-size: 0.8rem;
   font-weight: bold;
@@ -546,11 +546,11 @@ input[type='submit'] {
 .sidebar h2 {
   padding: 20px;
   margin-top: 50px;
-  background: var(--dark-medium-gray);
+  background: var(--dark-medium-blue);
 }
 
 .sidebar .sidebar-headline {
-  border-bottom: 1px solid var(--smoky-black);
+  border-bottom: 1px solid var(--smoky-blue);
   padding: 0px 10px;
 }
 
@@ -679,7 +679,7 @@ input[type='submit'] {
 
   .nav-section {
     display: flex;
-    background: hsl(0, 0%, 15%);
+    background: hsl(224, 100%, 69%);
     justify-content: space-between;
     align-items: center;
     margin-left: 10px;
@@ -733,7 +733,7 @@ input[type='submit'] {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: hsl(0, 0%, 15%);
+    background: hsl(236, 100%, 73%);
   }
 
   .dropdown-toggle {
@@ -758,7 +758,7 @@ input[type='submit'] {
 
   .dropdown-toggle:hover,
   .dropdown-toggle:focus {
-    background: hsl(0, 0%, 25%);
+    background: hsl(234, 100%, 71%);
   }
 
   .dropdown-toggle.toggle-on:after {
@@ -998,4 +998,8 @@ input[type='submit'] {
     margin: -12px;
     border: none;
   }
+}
+.logo a img {
+  max-height: 50%;
+  max-width: 50%;
 }
