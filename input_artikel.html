@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Artikel Baru</title>
+</head>
+<body>
+  <h2>Input Artikel Baru</h2>
+  <form id="artikelForm" onsubmit="submitArtikel(event)">
+    <label for="judul">Judul:</label>
+    <input type="text" id="judul" required><br>
+
+    <label for="gambar">Pilih gambar</label><br>
+    <input type="file" id="gambar" accept="image/*" required><br>
+    <label for="konten">Konten:</label>
+    <textarea id="konten" rows="8" required></textarea><br>
+ 
+    <label for="gambar2">Pilih gambar</label><br>
+    <input type="file" id="gambar" accept="image/*" required><br>
+    <label for="konten2">Konten:</label>
+    <textarea id="konten" rows="8" required></textarea><br>
+   
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="js/upload_artikel.js"></script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 // Burger Menu Animation
 
 const navSlide = () => {
@@ -9,6 +11,9 @@ const navSlide = () => {
   burger.addEventListener('click', () => {
     // Toggle Nav
     nav.classList.toggle('nav-active');
+
+
+
 
     //Animate Links
     navLinks.forEach((link, index) => {
@@ -59,3 +64,9 @@ $("a[href='#top']").click(function() {
   $('html, body').animate({ scrollTop: 0 }, 'slow');
   return false;
 });
+
+   // Login
+   document.getElementById("loginButton").addEventListener("click", function(){
+    //console.log("tombol login di klik");
+    window.open("halaman_login.html", "_blank");
+   })
