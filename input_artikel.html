@@ -6,19 +6,49 @@
 <body>
   <h2>Input Artikel Baru</h2>
   <form id="artikelForm" onsubmit="submitArtikel(event)">
-    <label for="judul">Judul:</label>
-    <input type="text" id="judul" required><br>
+    <label for="tanggal">Tanggal :</label>
+    <input type="date" id="tanggal" required ><br>
 
-    <label for="gambar">Pilih gambar</label><br>
+    <label for="kategori">Kategori :</label>
+    <select id="kategori" required><br>
+      <option value=""></option>
+      <option value="entertainment">Entertainment</option>
+      <option value="world">World</option>
+      <option value="politics">Politics</option>
+      <option value="business">Business</option>
+      <option value="sport">Sport</option>
+      <option value="science">Science</option>
+      <option value="travel">Travel</option>
+      <option value="healt">Healt</option>
+      <option value="anime">Anime</option>
+      <option value="technology">Technology</option>
+      <option value="Local">Local</option>
+      <option value="etc">ETC</option>
+    </select><br><br>
+
+    <label for="judul">Judul:</label>
+    <input type="text" id="judul" required><br><br>
+
+    <label for="gambar">Pilih gambar</label>
     <input type="file" id="gambar" accept="image/*" required><br>
     <label for="konten">Konten:</label>
-    <textarea id="konten" rows="8" required></textarea><br>
+    <textarea id="konten" rows="8" required></textarea><br><br>
  
-    <label for="gambar2">Pilih gambar</label><br>
-    <input type="file" id="gambar2" accept="image/*" required><br>
+    <label for="gambar1">Pilih gambar</label>
+    <input type="file" id="gambar1" accept="image/*" ><br>
+    <label for="gambar2">Pilih gambar</label>
+    <input type="file" id="gambar2" accept="image/*" ><br>
+    <label for="gambar3">Pilih gambar</label>
+    <input type="file" id="gambar3" accept="image/*" ><br>
+    <label for="gambar4">Pilih gambar</label>
+    <input type="file" id="gambar4" accept="image/*" ><br>
+
     <label for="konten2">Konten:</label>
-    <textarea id="konten2" rows="8" required></textarea><br>
+    <textarea id="konten2" rows="8" ></textarea><br><br>
    
+    <label for="gambar5">Pilih gambar</label>
+    <input type="file" id="gambar5" accept="image/*" ><br><br><br>
+
     <input type="submit" value="Submit">
   </form>
 
