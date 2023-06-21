@@ -31,5 +31,6 @@ function submitArtikel(event) {
     })
     .catch(error => {
       console.error('Terjadi kesalahan:', error);
+      console.log('Artikel gagal dikirim');
     });
   }
