@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>Login To akun GTS</title>
   <script src="js/login.js"></script>
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <h2>Login</h2>
+<div class="container">
+  <div class="logo">
+    <a href="index.html" title="GTS logo"><img src="images/logo.png" alt="logo" width="250" height="100"></a>
+  </div>
+  <h2 class="login-heading">Login</h2>
   <form id="loginForm" onsubmit="login(event)">
     <label for="username">Username:</label>
     <input type="text" id="username" required><br>
@@ -13,5 +18,6 @@
     <input type="password" id="password" required><br>
     <input type="submit" value="Login">
   </form>
+</div>
 </body>
 </html>
