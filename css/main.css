@@ -3,7 +3,7 @@
    ------------------------------------------------------------- */
 
    :root {
-    --smoky-black: #000000;
+    --smoky-black: #ffffff;
     --raisin-black: #1b1a33;
     --lapis-lazuli: #21759b;
     --dark-medium-gray: #afbdf5;
@@ -66,6 +66,7 @@
   
   body {
     font-family: 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(236, 236, 236);
   }
   
   h1,
@@ -379,7 +380,6 @@
   .social-media-links {
     display: flex;
     justify-content: space-around;
-    background: var(--lapis-lazuli);
   }
   
   .info-links {
@@ -422,7 +422,7 @@
   
   footer {
     position: relative;
-    background: var(--smoky-black);
+    background: var(--raisin-black);
     padding: 5px;
   }
   
@@ -430,7 +430,7 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    background: var(--smoky-black);
+    background: var(--raisin-black);
     color: var(--anti-flash-white);
   }
   
