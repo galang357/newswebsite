@@ -57,6 +57,15 @@ navSlide();
         : '<span class="screen-reader-text">Expand child menu</span>'
     );
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    var moreLink = document.getElementById('moreLink');
+    var submenu = document.getElementById('submenu');
+  
+    moreLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      submenu.classList.toggle('show');
+    });
+  });
 })(jQuery);
 
 // Scroll to Top

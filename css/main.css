@@ -3,7 +3,7 @@
    ------------------------------------------------------------- */
 
    :root {
-    --smoky-black: #ffffff;
+    --smoky-black: #000000;
     --raisin-black: #1b1a33;
     --lapis-lazuli: #21759b;
     --dark-medium-gray: #afbdf5;
@@ -115,25 +115,41 @@
    */
   
   .nav-section {
-    background: rgb(22, 22, 34);
+    display: flex;
+    background: rgba(0, 0, 102, 0.747);
     position: relative;
     padding-bottom: 2px;
+    align-items: center;
+    justify-content: space-between;
+    
   }
-  
+   
   /* 
    * Logo
    */
   
   .logo a {
     display: block;
-    color: #fff;
+    color: rgb(0, 2, 141);
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
     padding-left: 15px;
     padding-top: 15px;
     margin-bottom: 15px;
+    font-style: italic;
+    text-shadow: 1px 2px 3px #e2e2e2;
+    
+  }
+  .logo span {
+    display: inline-block;
+    color: #f1f1f1;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 1px 2px 3px #1100fd;
   }
   
   /* 
@@ -155,7 +171,19 @@
   }
   
   .nav-menu li a:hover {
-    background: hsla(246, 100%, 75%, 0.199);
+    background-color: #d3dcf8;
+    color: var(--raisin-black)
+  }
+  .nav-menu li a::after {
+    content: "";
+    display: block;
+    padding: 0.5px;
+    border-bottom: 0.1rem solid var(--raisin-black);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  .nav-menu li a:hover::after{
+    transform: scaleX(0.8)
   }
   
   .nav-menu li a[href='#more'] {
@@ -336,7 +364,7 @@
    */
   
   .footer-links {
-    padding: 20px;
+    padding: 50px;
     background: var(--raisin-black);
   }
   
@@ -442,6 +470,10 @@
     content: '\f151';
     color: var(--anti-flash-white);
     font-size: 2.6rem;
+  }
+  .footer-links a:hover {
+      color: rgb(0, 247, 255);
+      text-shadow: 1px 2px 3px #e2e2e2;
   }
   
   /* -------------------------------------------------------------
@@ -695,6 +727,7 @@
       padding-left: 20px;
       padding-top: 7px;
       margin-bottom: 4px;
+      box-shadow: #e2e2e2;
     }
   
     /*
@@ -716,7 +749,7 @@
   
     .nav-menu li a[href='#more'] {
       display: block;
-      width: 120px;
+      width: 120%;
     }
   
     .nav-menu ul ul {
@@ -999,8 +1032,8 @@
       border: none;
     }
   }
-  .logo a img {
+  /* .logo a img { 
     max-height: 20%;
     max-width: 20%;
   }
-  
+  */
