@@ -59,6 +59,15 @@ navSlide();
   });
 })(jQuery);
 
+var moreButton = document.querySelector('.nav-links .dropdown-toggle');
+var subMenu = document.querySelector('.nav-links .sub-menu');
+
+moreButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  subMenu.classList.toggle('active');
+});
+
+
 // Scroll to Top
 $("a[href='#top']").click(function() {
   $('html, body').animate({ scrollTop: 0 }, 'slow');
