@@ -66,7 +66,8 @@ navSlide();
       submenu.classList.toggle('show');
     });
   });
-})(jQuery);
+})
+(jQuery);
 
 // Scroll to Top
 $("a[href='#top']").click(function() {

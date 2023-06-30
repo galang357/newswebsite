@@ -4,7 +4,7 @@
 
    :root {
     --smoky-black: #000000;
-    --raisin-black: #1b1a33;
+    --raisin-black: #05042c;
     --lapis-lazuli: #21759b;
     --dark-medium-gray: #afbdf5;
     --cornell-red: #bb1919;
@@ -213,6 +213,7 @@
     display: block;
     transform: translateX(0%);
     height: 100vh;
+
   }
   
   @keyframes navLinkFade {
@@ -227,7 +228,8 @@
   }
   
   .toggle .line-1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    /* transform: rotate(-45deg) translate(-5px, 6px); */
+    opacity: 0;
   }
   
   .toggle .line-2 {
@@ -235,7 +237,8 @@
   }
   
   .toggle .line-3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    /* transform: rotate(45deg) translate(-5px, -6px); */
+    opacity: 0;
   }
   
   /* -------------------------------------------------------------

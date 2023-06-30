@@ -9,13 +9,15 @@
   <meta name="author" content="dukibu">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Home | GTS News</title>
+  <title>Home | Portal tolis News</title>
 
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <!--animasi-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -47,8 +49,8 @@
             <li><a href="article.html" title="Politics">Politics</a></li>
             <li><a href="article.html" title="Sport">Sport</a></li>
             <li><a href="article.html" title="Entertainment">Entertainment</a></li>
-            <li><a href="#" title="Travel">Travel</a></li>
-            <li><a href="#" title="Style">Style</a></li>
+            <li><a href="article.html" title="Travel">Travel</a></li>
+            <li><a href="article.html" title="Style">Style</a></li>
             <li>
               <a href="more" title="More">More<span class="dropdown-toggle" aria-expanded="false"></span>
                 <span class="screen-reader-text">Expand child menu</span></a>
@@ -72,7 +74,7 @@
 
       <div class="top-news">
 
-        <section class="latest-news">
+        <section class="latest-news" data-aos="zoom-in-down">
           <div class="headline">
             <p>Breaking News</p>
             <a href="article.html">
@@ -81,20 +83,20 @@
           </div>
         </section> <!-- End of class="latest-news" -->
 
-        <section class="top-stories">
+        <section class="top-stories" >
           <h2>Top Stories</h2>
-          <div class="headline headline-1">
+          <div class="headline headline-1" data-aos="fade-down-left">
             <a href="#">
               <h1>Quisque sit amet mi lectus</h1>
             </a>
           </div>
-          <div class="headline headline-2">
+          <div class="headline headline-2" data-aos="fade-up-right">
             <a href="#">
               <h1>Cras placerat augue tellus</h1>
             </a>
           </div>
 
-          <div class="headline headline-3">
+          <div class="headline headline-3" data-aos="fade-down-right">
             <a href="#">
               <h1>Rutrum laoreet non pulvinar</h1>
             </a>
@@ -105,7 +107,7 @@
 
       <section class="world">
         <h2>World</h2>
-        <div class="story story-1">
+        <div class="story story-1" data-aos="fade-right">
           <a href="#">
             <div class="story-img">
               <img src="images/politics2.jpg" alt="Protesters">
@@ -117,7 +119,7 @@
           </a>
         </div>
 
-        <div class="story story-2">
+        <div class="story story-2" data-aos="fade-left">
           <a href="#">
             <div class="story-img">
               <img src="images/politics10.jpg" alt="Police Officers">
@@ -129,7 +131,7 @@
           </a>
         </div>
 
-        <div class="story story-3">
+        <div class="story story-3" data-aos="fade-down-left">
           <a href="#">
             <div class="story-img">
               <img src="images/world9.jpg" alt="Aerial view of the city">
@@ -146,7 +148,7 @@
         <h2>Politics</h2>
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-up">
               <img src="images/politics4.jpg" alt="Protesters">
             </div>
             <div class="story-headline">
@@ -158,7 +160,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-down">
               <img src="images/politics5.jpg" alt="People with newspapers">
             </div>
             <div class="story-headline">
@@ -170,7 +172,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-up">
               <img src="images/politics9.jpg" alt="Police Officer">
             </div>
             <div class="story-headline">
@@ -182,7 +184,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-down">
               <img src="images/world2.jpg" alt="London">
             </div>
             <div class="story-headline">
@@ -248,7 +250,7 @@
         <h2>Sport</h2>
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-up">
               <img src="images/sport2.jpg" alt="Marathon runner">
             </div>
             <div class="story-headline">
@@ -260,7 +262,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-down">
               <img src="images/sport5.jpg" alt="Football field">
             </div>
             <div class="story-headline">
@@ -272,7 +274,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-up">
               <img src="images/sport6.jpg" alt="American football players">
             </div>
             <div class="story-headline">
@@ -284,7 +286,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="fade-down">
               <img src="images/sport7.jpg" alt="Sport car">
             </div>
             <div class="story-headline">
@@ -299,7 +301,7 @@
         <h2>Entertainment</h2>
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="zoom-in-down">
               <img src="images/entertainment1.jpg" alt="Live concert">
             </div>
             <div class="story-headline">
@@ -311,7 +313,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="zoom-in-down">
               <img src="images/entertainment4.jpg" alt="Man playing guitar">
             </div>
             <div class="story-headline">
@@ -323,7 +325,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="zoom-in-left">
               <img src="images/entertainment6.jpg" alt="Wedding">
             </div>
             <div class="story-headline">
@@ -335,7 +337,7 @@
 
         <div class="story">
           <a href="#">
-            <div class="story-img">
+            <div class="story-img" data-aos="zoom-in-left">
               <img src="images/entertainment10.jpg" alt="Fashion model">
             </div>
             <div class="story-headline">
@@ -347,58 +349,74 @@
       </section> <!-- End of class="entertainment" -->
 
       <section class="more">
-        <h2>More...</h2>
+        <h2>More</h2>
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="100"
+          data-aos-easing="ease-in-sine">
             <h3>Cras fringilla porta vehicula. Etiam turpis tellus</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine">
             <h3>pretium ac purus at, pretium dapibus velit</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <h3>Sed ac elit posuere, cursus risus porttitor</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="100"
+          data-aos-easing="ease-in-sine">
             <h3>Nam egestas, enim a lobortis vestibulum</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine">
             <h3>Ligula massa commodo nulla, nec convallis arcu risus</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <h3>Vestibulum dapibus, risus vel condimentum porta</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <h3>a condimentum est nisl sed felis</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <h3>Nullam rhoncus tincidunt felis at auctor donec</h3>
             <p class="exact-time">13:53h</p>
           </div>
@@ -462,7 +480,11 @@
   <!-- <script src="js/modernizr.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <!--
