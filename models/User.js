@@ -5,9 +5,11 @@ const User = db.define(
     "user",
     {
        // id: {type: Sequelize.INTEGER},
-        username: {type: Sequelize.STRING},
-        email: {type: Sequelize.STRING},
-        password: {type: Sequelize.STRING},
+        kategori: {type: Sequelize.STRING},
+        judul: {type: Sequelize.STRING},
+        konten: {type: Sequelize.STRING},
+        image: { type: Sequelize.STRING },
+        tanggal: { type: Sequelize.DATE },
     },
     {
         freezeTableName: true

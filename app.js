@@ -1,7 +1,18 @@
 const express = require('express');
 //const mysql = require('mysql');
+const multer = require("multer");
 
 const app = express();
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+      cb(null, "uploads/"); // Menentukan folder penyimpanan gambar
+  },
+  filename: function (req, file, cb) {
+      cb(null, Date.now() + "-" + file.originalname); // Menentukan nama file gambar yang disimpan
+  }
+});
+const upload = multer({ storage: storage });
 
 const db =require("./config/db")
 // Contoh rute untuk URL root
@@ -20,23 +31,30 @@ const User = require('./models/User'); // Mengimpor model User dari file terpisa
 
 app.use(express.json()); // Middleware untuk parsing body dengan format JSON
 
-app.post('/crud', async (req, res) => {
+app.post("/crud", upload.single("image"), async (req, res) => {
   try {
-    const {  username, email, password } = req.body;
+      const { kategori, judul, konten } = req.body;
+     // const image = req.file.filename;
+      const tanggal = new Date(); // Mendapatkan tanggal saat ini
+     let image = "";
+     if (req.file) {
+         image = req.file.filename;
+     }
 
-    const newUser = new User({
-     // id,
-      username,
-      email,
-      password
-    });
+      const newUser = new User({
+          kategori,
+          judul,
+          konten,
+          image,
+          tanggal, // Mengatur kolom "date" dengan nilai tanggal saat ini
+      });
 
-    await newUser.save();
+      await newUser.save();
 
-    res.json(newUser);
+      res.json(newUser);
   } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server error');
+      console.error(err.message);
+      res.status(500).send("Server error");
   }
 });
 
@@ -85,13 +103,15 @@ app.delete("/crud/:id", async (req, res) =>{
 
   app.put("/crud/:id", async (req, res) =>{
     try{
-      const {username, email, password} = req.body
+      const {kategori, judul, konten, image, tanggal} = req.body
       const id = req.params.id
 
       const updateUser = await User.update({
-        username,
-        email,
-        password
+        kategori,
+        judul,
+        konten,
+        image,
+        tanggal
       },{where: {id:id}})
 
       await updateUser;
