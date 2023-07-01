@@ -40,7 +40,7 @@ async function submitArtikel(event) {
     if (response.ok) {
       const data = await response.json();
       console.log("Artikel berhasil disimpan:", data);
-      // Lakukan tindakan lain setelah berhasil menyimpan artikel
+      window.location.href = "../article.html";
     } else {
       console.error("Gagal menyimpan artikel.");
     }
