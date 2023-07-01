@@ -9,13 +9,16 @@
   <meta name="author" content="dukibu">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Home | GTS News</title>
+  <title>Home | Portal Tolis News</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -33,30 +36,29 @@
       <section class="nav-section">
 
         <!-- Logo -->
-        <div class="logo">
-          <a href="index.html" title="Frivizn logo"><img src="images/logo.png" alt="" width="20" height="20"></a>
+        <div class="logo" data-aos="flip-left">
+          <a href="#" id="loginButton" title="Login"><img src="images/logo.png" alt="" width="20" height="20"></a>
         </div>
 
         <!-- Navigation -->
         <nav class="nav-menu" role="navigation">
           <ul class="nav-links">
-            <li><a href="index.html" title="Home">Home</a></li>
+            <!-- <li><a href="index.html" title="Home">Home</a></li> -->
             <li><a href="article.html" title="World">World</a>
-            <li><a href="#politics.html" title="Politics">Politics</a></li>
-            <li><a href="#business.html" title="Business">Business</a></li>
-            <li><a href="#sport.html" title="Sport">Sport</a></li>
-            <li><a href="#entertainment.html" title="Entertainment">Entertainment</a></li>
+            <li><a href="politics.html" title="Politics">Politics</a></li>
+            <li><a href="stile.html" title="Style">Style</a></li>
+            <!-- <li><a href="#business.html" title="Business">Business</a></li> -->
+            <li><a href="sport.html" title="Sport">Sport</a></li>
+            <li><a href="travel.html" title="Travel">Travel</a></li>
+            <li><a href="entertainment.html" title="Entertainment">Entertainment</a></li>
             <li>
-              <a href="#more"  title="More">More...<span class="dropdown-toggle" aria-expanded="false"></span>
-                <span class="screen-reader-text">Expand child menu</span></a>
+              <a href="more.html"  title="More"> More</a>
               <ul class="sub-menu">
-                <li><a href="#" title="Science">Science</a></li>
-                <li><a href="#" title="Travel">Travel</a></li>
-                <li><a href="#" title="Health">Health</a></li>
-                <li><a href="#" title="Style">Style</a></li>
-                <li><a href="#" title="Weather">Weather</a></li>
-                <li><a href="#" title="Video">Video</a></li>
-                <li><a id="loginButton" title="Login">Login</a></li>
+                <!-- <li><a href="#" title="Science">Science</a></li> -->
+                <!-- <li><a href="#" title="Health">Health</a></li> -->
+                <!-- <li><a href="#" title="Weather">Weather</a></li>
+                <li><a href="#" title="Video">Video</a></li> -->
+                <!-- <li><a href="#" id="loginButton" title="Login">Login</a></li> -->
               </ul>
             </li>
           </ul>
@@ -77,7 +79,7 @@
 
       <div class="top-news">
 
-        <section class="latest-news">
+        <section class="latest-news" data-aos="fade-right">
           <div class="headline">
             <p>Breaking News</p>
             <a href="article.html">
@@ -88,18 +90,18 @@
 
         <section class="top-stories">
           <h2>Top Stories</h2>
-          <div class="headline headline-1">
+          <div class="headline headline-1" data-aos="fade-left">
             <a href="#">
               <h1>Quisque sit amet mi lectus</h1>
             </a>
           </div>
-          <div class="headline headline-2">
+          <div class="headline headline-2" data-aos="fade-right">
             <a href="#">
               <h1>Cras placerat augue tellus</h1>
             </a>
           </div>
 
-          <div class="headline headline-3">
+          <div class="headline headline-3" data-aos="fade-left">
             <a href="#">
               <h1>Rutrum laoreet non pulvinar</h1>
             </a>
@@ -110,19 +112,19 @@
 
       <section class="world">
         <h2>World</h2>
-        <div class="story story-1">
+        <div class="story story-1" data-aos="flip-left">
           <a href="#">
             <div class="story-img">
               <img src="images/politics2.jpg" alt="Protesters">
             </div>
-            <div class="story-headline">
+            <div class="story-headline" data-aos="flip-right">
               <h3>Donec quis velit tellus Vestibulum</h3>
               <p class="exact-time">13:53h</p>
             </div>
           </a>
         </div>
 
-        <div class="story story-2">
+        <div class="story story-2" data-aos="flip-right">
           <a href="#">
             <div class="story-img">
               <img src="images/politics10.jpg" alt="Police Officers">
@@ -468,6 +470,10 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <!--
