@@ -24,7 +24,7 @@ body {
     animation: slideAnimation 5s linear infinite;
 }
 
-@keyframes slideAnimation {
+/* @keyframes slideAnimation {
   0% {
     transform: translateX(-100%);
   }
@@ -34,7 +34,7 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}
+} */
   form {
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ input[type="text"]:hover,
 input[type="password"]:hover {
   opacity: 0.8;
 }
-.logo img {
+/* .logo img {
     animation: slideAnimation 5s linear infinite;
   }
   
@@ -100,4 +100,4 @@ input[type="password"]:hover {
     100% {
       transform: translateX(-50%);
     }
-  }
+  } */

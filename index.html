@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
@@ -36,30 +37,29 @@
       <section class="nav-section">
 
         <!-- Logo -->
-        <div class="logo" data-aos="flip-left">
-          <a href="#" id="loginButton" title="Login"><img src="images/logo.png" alt="" width="20" height="20"></a>
+        <div class="logo">
+          <a href="halaman_login.html" id="loginButton" title="Login" target="_blank"><img src="images/logo.png" alt="" width="20" height="20"></a>
         </div>
 
         <!-- Navigation -->
         <nav class="nav-menu" role="navigation">
           <ul class="nav-links">
             <!-- <li><a href="index.html" title="Home">Home</a></li> -->
-            <li><a href="article.html" title="World">World</a>
-            <li><a href="politics.html" title="Politics">Politics</a></li>
-            <li><a href="stile.html" title="Style">Style</a></li>
+            <li><a href="article.html" title="World" data-aos="flip-left">World</a>
+            <li><a href="politics.html" title="Politics" data-aos="flip-left">Politics</a></li>
+            <li><a href="stile.html" title="Style" data-aos="flip-left">Style</a></li>
             <!-- <li><a href="#business.html" title="Business">Business</a></li> -->
-            <li><a href="sport.html" title="Sport">Sport</a></li>
-            <li><a href="travel.html" title="Travel">Travel</a></li>
-            <li><a href="entertainment.html" title="Entertainment">Entertainment</a></li>
-            <li>
-              <a href="more.html"  title="More"> More</a>
-              <ul class="sub-menu">
-                <!-- <li><a href="#" title="Science">Science</a></li> -->
-                <!-- <li><a href="#" title="Health">Health</a></li> -->
-                <!-- <li><a href="#" title="Weather">Weather</a></li>
-                <li><a href="#" title="Video">Video</a></li> -->
-                <!-- <li><a href="#" id="loginButton" title="Login">Login</a></li> -->
-              </ul>
+            <li><a href="sport.html" title="Sport" data-aos="flip-left">Sport</a></li>
+            <li><a href="travel.html" title="Travel" data-aos="flip-left">Travel</a></li>
+            <li><a href="entertainment.html" title="Entertainment" data-aos="flip-left">Entertainment</a></li>
+            <li><a href="more.html"  title="More" data-aos="flip-left"> More</a>
+              <!-- <ul class="sub-menu">
+                <li><a href="#" title="Science">Science</a></li>
+                <li><a href="#" title="Health">Health</a></li>
+                <li><a href="#" title="Weather">Weather</a></li>
+                <li><a href="#" title="Video">Video</a></li>
+                <li><a href="#" id="loginButton" title="Login">Login</a></li> 
+              </ul> -->
             </li>
           </ul>
           <div class="burger">
@@ -129,14 +129,17 @@
             <div class="story-img">
               <img src="images/politics10.jpg" alt="Police Officers">
             </div>
-            <div class="story-headline">
+            <div class="story-headline" data-aos="flip-left">
               <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
               <p class="exact-time">13:53h</p>
             </div>
           </a>
         </div>
 
-        <div class="story story-3">
+        <div class="story story-3" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500">
           <a href="#">
             <div class="story-img">
               <img src="images/world9.jpg" alt="Aerial view of the city">
@@ -151,7 +154,10 @@
 
       <section class="politics">
         <h2>Politics</h2>
-        <div class="story">
+        <div class="story" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="200"
+        data-aos-duration="200">
           <a href="#">
             <div class="story-img">
               <img src="images/politics4.jpg" alt="Protesters">
@@ -163,7 +169,10 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="300"
+        data-aos-duration="300">
           <a href="#">
             <div class="story-img">
               <img src="images/politics5.jpg" alt="People with newspapers">
@@ -175,7 +184,10 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="400"
+        data-aos-duration="400">
           <a href="#">
             <div class="story-img">
               <img src="images/politics9.jpg" alt="Police Officer">
@@ -187,7 +199,10 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500">
           <a href="#">
             <div class="story-img">
               <img src="images/world2.jpg" alt="London">
@@ -202,7 +217,9 @@
 
       <section class="business">
         <h2>Business</h2>
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="750">
           <a href="#">
             <div class="story-img">
               <img src="images/business1.jpg" alt="Office">
@@ -214,7 +231,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000">
           <a href="#">
             <div class="story-img">
               <img src="images/business4.jpg" alt="Computer screen">
@@ -226,7 +245,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1250">
           <a href="#">
             <div class="story-img">
               <img src="images/business7.jpg" alt="Screen with graphic statistics">
@@ -238,7 +259,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
           <a href="#">
             <div class="story-img">
               <img src="images/business10.jpg" alt="Container terminal">
@@ -253,7 +276,9 @@
 
       <section class="sport">
         <h2>Sport</h2>
-        <div class="story">
+        <div class="story"data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="600">
           <a href="#">
             <div class="story-img">
               <img src="images/sport2.jpg" alt="Marathon runner">
@@ -265,7 +290,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="900">
           <a href="#">
             <div class="story-img">
               <img src="images/sport5.jpg" alt="Football field">
@@ -277,7 +304,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1200">
           <a href="#">
             <div class="story-img">
               <img src="images/sport6.jpg" alt="American football players">
@@ -289,7 +318,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
           <a href="#">
             <div class="story-img">
               <img src="images/sport7.jpg" alt="Sport car">
@@ -304,7 +335,9 @@
 
       <section class="entertainment">
         <h2>Entertainment</h2>
-        <div class="story">
+        <div class="story" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
           <a href="#">
             <div class="story-img">
               <img src="images/entertainment1.jpg" alt="Live concert">
@@ -316,7 +349,9 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
           <a href="#">
             <div class="story-img">
               <img src="images/entertainment4.jpg" alt="Man playing guitar">
@@ -328,7 +363,10 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500">
           <a href="#">
             <div class="story-img">
               <img src="images/entertainment6.jpg" alt="Wedding">
@@ -340,7 +378,10 @@
           </a>
         </div>
 
-        <div class="story">
+        <div class="story" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500">
           <a href="#">
             <div class="story-img">
               <img src="images/entertainment10.jpg" alt="Fashion model">
@@ -356,56 +397,80 @@
       <section class="more">
         <h2>More...</h2>
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="500">
             <h3>Cras fringilla porta vehicula. Etiam turpis tellus</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="750"
+          data-aos-duration="750">
             <h3>pretium ac purus at, pretium dapibus velit</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="1000"
+          data-aos-duration="1000">
             <h3>Sed ac elit posuere, cursus risus porttitor</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline"data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="1250"
+          data-aos-duration="1250">
             <h3>Nam egestas, enim a lobortis vestibulum</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="1500"
+          data-aos-duration="1500">
             <h3>Ligula massa commodo nulla, nec convallis arcu risus</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="1750"
+          data-aos-duration="1750">
             <h3>Vestibulum dapibus, risus vel condimentum porta</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="2000"
+          data-aos-duration="2000">
             <h3>a condimentum est nisl sed felis</h3>
             <p class="exact-time">13:53h</p>
           </div>
         </a>
 
         <a href="#">
-          <div class="more-headline">
+          <div class="more-headline" data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="2200"
+          data-aos-duration="2200">
             <h3>Nullam rhoncus tincidunt felis at auctor donec</h3>
             <p class="exact-time">13:53h</p>
           </div>
@@ -461,7 +526,7 @@
     <!-- Footer Credit -->
     <footer role="contentinfo">
       <p>2023 &copy; by Portal Tolitoli</p>
-      <a class="scroll-top" href="#top"></a>
+      <a class="scroll-top" href="#top"><i class="fas fa-home"></i></a>
     </footer>
 
   </div> <!-- end of class="content-wrap" -->
