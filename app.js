@@ -1,6 +1,7 @@
 const express = require('express');
 //const mysql = require('mysql');
 const multer = require("multer");
+const path = require('path');
 
 const app = express();
 
@@ -8,9 +9,10 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
       cb(null, "uploads/"); // Menentukan folder penyimpanan gambar
   },
-  filename: function (req, file, cb) {
-      cb(null, Date.now() + "-" + file.originalname); // Menentukan nama file gambar yang disimpan
-  }
+  filename: (req, file, cb) => {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+    cb(null, uniqueSuffix + path.extname(file.originalname));
+  },
 });
 const upload = multer({ storage: storage });
 
@@ -30,6 +32,8 @@ db.authenticate().then(() =>
 const User = require('./models/User'); // Mengimpor model User dari file terpisah
 
 app.use(express.json()); // Middleware untuk parsing body dengan format JSON
+
+
 
 app.post("/crud", upload.single("image"), async (req, res) => {
   try {

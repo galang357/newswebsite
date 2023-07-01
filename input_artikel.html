@@ -6,9 +6,9 @@
 </head>
 <body>
   <h2>Input Artikel Baru</h2>
-  <form id="artikelForm" onsubmit="submitArtikel(event)">
+  <form id="artikelForm" onsubmit="submitArtikel(event)" enctype="multipart/form-data">
     <label for="tanggal">Tanggal :</label>
-    <input type="date" id="tanggal" required ><br>
+    <input type="date" id="tanggal" ><br>
 
     <label for="kategori">Kategori :</label>
     <select id="kategori" required><br>
@@ -31,11 +31,11 @@
     <input type="text" id="judul" required><br><br>
 
     <label for="gambar">Pilih gambar</label>
-    <input type="file" id="gambar" accept="image/*" required><br>
+    <input type="file" id="gambar" accept="image/*" ><br>
     <label for="konten">Konten:</label>
     <textarea id="konten" rows="8" required></textarea><br><br>
  
-    <label for="gambar1">Pilih gambar</label>
+    <!-- <label for="gambar1">Pilih gambar</label>
     <input type="file" id="gambar1" accept="image/*" ><br>
     <label for="gambar2">Pilih gambar</label>
     <input type="file" id="gambar2" accept="image/*" ><br>
@@ -48,7 +48,7 @@
     <textarea id="konten2" rows="8" ></textarea><br><br>
    
     <label for="gambar5">Pilih gambar</label>
-    <input type="file" id="gambar5" accept="image/*" ><br><br><br>
+    <input type="file" id="gambar5" accept="image/*" ><br><br><br> -->
 
     <input type="submit" value="Submit">
   </form>

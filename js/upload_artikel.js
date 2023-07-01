@@ -1,36 +1,50 @@
 function submitArtikel(event) {
     event.preventDefault(); // Mencegah form untuk melakukan submit
   
-    // Mendapatkan nilai judul dan konten dari form
-    var judul = document.getElementById("judul").value;
-    var gambar = document.getElementById("gambar").value;
-    var konten = document.getElementById("konten").value;
-    var gambar2 = document.getElementById("gambar2").value;
-    var konten2 = document.getElementById("konten2").value;
-    
-  
-    // Kirim data artikel ke server menggunakan AJAX atau fetch
-    
-    fetch('/submit-artikel', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        judul: judul,
-        gambar: gambar,
-        konten: konten,
-        gambar2: gambar2,
-        konten2: konten2,
-      })
-    })
-    .then(response => {
-      // pengalihan halaman
-      window.location.href = "../article.html";
-      console.log('Artikel berhasil dikirim');
-    })
-    .catch(error => {
-      console.error('Terjadi kesalahan:', error);
-      console.log('Artikel gagal dikirim');
+    // Mengambil referensi elemen-elemen HTML
+const form = document.getElementById("artikelForm");
+const kategoriInput = document.getElementById("kategori");
+const judulInput = document.getElementById("judul");
+const gambarInput = document.getElementById("gambar");
+const kontenInput = document.getElementById("konten");
+const tanggalInput = document.getElementById("tanggal");
+
+// Menggunakan Event Listener untuk menangani pengiriman formulir
+form.addEventListener("submit", submitArtikel);
+
+// Fungsi untuk menangani pengiriman formulir
+async function submitArtikel(event) {
+  event.preventDefault(); // Menghentikan perilaku pengiriman formulir default
+
+  // Mengambil nilai-nilai input dari formulir
+  const kategori = kategoriInput.value;
+  const judul = judulInput.value;
+  const gambar = gambarInput.files[0]; // Mengambil file gambar yang dipilih
+  const konten = kontenInput.value;
+  const tanggal = tanggalInput.value;
+
+  // Membuat objek FormData untuk mengirim data dalam bentuk multipart/form-data
+  const formData = new FormData();
+  formData.append("kategori", kategori);
+  formData.append("judul", judul);
+  formData.append("image", gambar);
+  formData.append("konten", konten);
+  formData.append("tanggal", tanggal);
+
+  try {
+    const response = await fetch("/crud", {
+      method: "POST",
+      body: formData,
     });
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log("Artikel berhasil disimpan:", data);
+      // Lakukan tindakan lain setelah berhasil menyimpan artikel
+    } else {
+      console.error("Gagal menyimpan artikel.");
+    }
+  } catch (err) {
+    console.error("Terjadi kesalahan:", err.message);
   }
+}}
