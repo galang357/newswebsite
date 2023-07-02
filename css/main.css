@@ -4,7 +4,7 @@
 
    :root {
     --smoky-black: #000000;
-    --raisin-black: #1b1a33;
+    --raisin-black: #010029;
     --lapis-lazuli: #21759b;
     --dark-medium-gray: #afbdf5;
     --cornell-red: #bb1919;
@@ -115,7 +115,7 @@
    */
   
   .nav-section {
-    background: rgb(22, 22, 34);
+    background: var(--raisin-black);
     position: relative;
     padding-bottom: 2px;
     display: flex;
@@ -697,7 +697,7 @@
      */
   
     .content-wrap {
-      max-width: 1280px;
+      max-width: 1600px;
       margin: 0 auto;
       padding: 30px 30px 0px 30px;
     }
@@ -708,7 +708,7 @@
   
     .nav-section {
       display: flex;
-      background: hsl(242, 45%, 13%);
+      background: var(--raisin-black);
       justify-content: space-between;
       align-items: center;
       margin-left: 10px;
@@ -762,7 +762,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      background: hsl(235, 32%, 8%);
+      background: var(--raisin-black);
     }
   
     .dropdown-toggle {
@@ -787,7 +787,7 @@
   
     .dropdown-toggle:hover,
     .dropdown-toggle:focus {
-      background: hsl(233, 36%, 9%);
+      background: var(--raisin-black);
     }
   
     .dropdown-toggle.toggle-on:after {
@@ -1031,5 +1031,6 @@
   .logo a img {
     max-height: 20%;
     max-width: 20%;
+    filter: drop-shadow(2px 2px 4px rgb(255, 255, 255));
   }
   
