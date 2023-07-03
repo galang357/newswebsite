@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tampil Artikel</title>
+</head>
+<body>
+    <h1>Artikel</h1>
+    <div id="artikel-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fungsi untuk menampilkan artikel berdasarkan judul yang diklik
+            function tampilArtikel(judul) {
+                // Mengirim permintaan AJAX untuk mengambil artikel berdasarkan judul
+                $.ajax({
+                    type: "GET",
+                    url: "tampil_artikel.php",
+                    data: {judul: judul},
+                    dataType: "json",
+                    success: function(response) {
+                        // Menampilkan artikel yang diklik di dalam div artikel-container
+                        var artikelContainer = $("#artikel-container");
+                        artikelContainer.empty();
+                        var artikelHtml = `
+                            <div class="artikel">
+                                <h2>${response.judul}</h2>
+                                <p>Tanggal: ${response.tanggal}</p>
+                                <p>Kategori: ${response.kategori}</p>
+                                <img src="${response.gambar}" alt="Gambar">
+                                <p>${response.konten}</p>
+                                <img src="${response.gambar2}" alt="Gambar 2">
+                                <p>${response.konten2}</p>
+                            </div>
+                        `;
+                        artikelContainer.append(artikelHtml);
+                    }
+                });
+            }
+
+            // Mengambil data artikel melalui AJAX
+            $.ajax({
+                type: "GET",
+                url: "tampil_artikel.php",
+                dataType: "json",
+                success: function(response) {
+                    // Menampilkan artikel di dalam div artikel-container
+                    var artikelContainer = $("#artikel-container");
+                    $.each(response, function(index, artikel) {
+                        var artikelHtml = `
+                            <div class="artikel">
+                                <h2><a class="judul-artikel" href="#" data-judul="${artikel.judul}">${artikel.judul}</a></h2>
+                                <p>Tanggal: ${artikel.tanggal}</p>
+                                <p>Kategori: ${artikel.kategori}</p>
+                                <img src="${artikel.gambar}" alt="Gambar">
+                                <p>${artikel.konten}</p>
+                                <img src="${artikel.gambar2}" alt="Gambar 2">
+                                <p>${artikel.konten2}</p>
+                            </div>
+                        `;
+                        artikelContainer.append(artikelHtml);
+                    });
+
+                    // Menambahkan event click pada judul artikel
+                    $(".judul-artikel").click(function(e) {
+                        e.preventDefault();
+                        var judul = $(this).data("judul");
+                        tampilArtikel(judul);
+                    });
+                }
+            });
+
+            // Menampilkan artikel dengan judul "test2" secara otomatis
+            tampilArtikel("test2");
+        });
+    </script>
+</body>
+</html>

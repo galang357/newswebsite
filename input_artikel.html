@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Input Artikel Baru</title>
-  <link rel="stylesheet" href="css/artikel.css">
+    <title>Input Artikel Baru</title>
 </head>
 <body>
-  <h2>Input Artikel Baru</h2>
-  <form id="artikelForm" onsubmit="submitArtikel(event)" enctype="multipart/form-data">
-    <label for="tanggal">Tanggal :</label>
-    <input type="date" id="tanggal" ><br>
+    <h1>Input Artikel Baru</h1>
+    <form id="input-form">
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal" ><br><br>
+        
+        <label for="kategori">Kategori:</label>
+        <input type="text" id="kategori" name="kategori" ><br><br>
 
-    <label for="kategori">Kategori :</label>
-    <select id="kategori" required><br>
-      <option value=""></option>
-      <option value="entertainment">Entertainment</option>
-      <option value="world">World</option>
-      <option value="politics">Politics</option>
-      <option value="business">Business</option>
-      <option value="sport">Sport</option>
-      <option value="science">Science</option>
-      <option value="travel">Travel</option>
-      <option value="healt">Healt</option>
-      <option value="anime">Anime</option>
-      <option value="technology">Technology</option>
-      <option value="Local">Local</option>
-      <option value="etc">ETC</option>
-    </select><br><br>
+        <label for="judul">Judul:</label>
+        <input type="text" id="judul" name="judul" required><br><br>
+        
+        <label for="gambar">Gambar:</label>
+        <input type="file" id="gambar" name="gambar"><br><br>
+        
+        <label for="konten">Konten:</label>
+        <textarea id="konten" name="konten" rows="5" ></textarea><br><br>
+        
+        <label for="gambar2">Gambar 2:</label>
+        <input type="file" id="gambar2" name="gambar2"><br><br>
+        
+        <label for="konten2">Konten 2:</label>
+        <textarea id="konten2" name="konten2" rows="5" ></textarea><br><br>
+        
+        <input type="submit" value="Simpan">
+    </form>
 
-    <label for="judul">Judul:</label>
-    <input type="text" id="judul" required><br><br>
-
-    <label for="gambar" class="file-input-wrapper">
-      <span>Pilih Gambar</span>
-      <input type="file" id="gambar" accept="image/*" onchange="showFileName(this)">
-    </label>
-    <div id="file-name" class="file-name">Nama file: </div> <br>
-    <label for="konten">Konten:</label>
-    <textarea id="konten" rows="8" required></textarea><br><br>
- 
-    <!-- <label for="gambar1">Pilih gambar</label>
-    <input type="file" id="gambar1" accept="image/*" ><br>
-    <label for="gambar2">Pilih gambar</label>
-    <input type="file" id="gambar2" accept="image/*" ><br>
-    <label for="gambar3">Pilih gambar</label>
-    <input type="file" id="gambar3" accept="image/*" ><br>
-    <label for="gambar4">Pilih gambar</label>
-    <input type="file" id="gambar4" accept="image/*" ><br>
-
-    <label for="konten2">Konten:</label>
-    <textarea id="konten2" rows="8" ></textarea><br><br>
-   
-    <label for="gambar5">Pilih gambar</label>
-    <input type="file" id="gambar5" accept="image/*" ><br><br><br> -->
-
-    <input type="submit" value="Submit">
-  </form>
-
-  <script src="js/upload_artikel.js"></script>
-  <script src="js/artikel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#input-form").submit(function(e) {
+                e.preventDefault();
+                
+                // Mengambil data dari form input
+                var tanggal = $("#tanggal").val();
+                var kategori = $("#kategori").val();
+                var judul = $("#judul").val();
+                var gambar = $("#gambar").val();
+                var konten = $("#konten").val();
+                var gambar2 = $("#gambar2").val();
+                var konten2 = $("#konten2").val();
+                
+                // Mengirim permintaan AJAX ke file PHP
+                $.ajax({
+                    type: "POST",
+                    url: "simpan_artikel.php",
+                    data: {tanggal: tanggal, kategori: kategori, judul: judul, gambar: gambar, konten: konten, gambar2: gambar2, konten2: konten2},
+                    success: function(response) {
+                        alert(response);
+                        // Lakukan tindakan lain setelah berhasil menyimpan artikel
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
