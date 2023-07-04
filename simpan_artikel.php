@@ -22,6 +22,12 @@ $result = mysqli_query($conn, $query);
 // Memberikan respons ke JavaScript
 if ($result) {
     echo "Artikel berhasil disimpan";
+    // Menyimpan judul artikel yang baru saja disimpan
+    $judul_artikel = $_POST['judul'];
+
+    // Mengirimkan judul artikel dalam format JSON
+    echo json_encode(['success' => true, 'judul' => $judul_artikel]);
+
 } else {
     echo "Gagal menyimpan artikel";
 }

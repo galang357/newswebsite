@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Input Artikel Baru</title>
+    <link rel="stylesheet" href="css/artikel.css">
 </head>
 <body>
-    <h1>Input Artikel Baru</h1>
+    <h2>Input Artikel Baru</h2>
     <form id="input-form">
         <label for="tanggal">Tanggal:</label>
         <input type="date" id="tanggal" name="tanggal" ><br><br>
@@ -52,7 +53,9 @@
                     data: {tanggal: tanggal, kategori: kategori, judul: judul, gambar: gambar, konten: konten, gambar2: gambar2, konten2: konten2},
                     success: function(response) {
                         alert(response);
-                        // Lakukan tindakan lain setelah berhasil menyimpan artikel
+                        // Menampilkan artikel yang baru saja disimpan setelah sukses menyimpan
+                        tampilArtikel(judul);
+
                     }
                 });
             });
