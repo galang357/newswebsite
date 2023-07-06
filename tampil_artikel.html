@@ -9,7 +9,7 @@
   <meta name="author" content="dukibu">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>World | Frivizn News</title>
+  <title>Portal Tolis</title>
 
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -117,9 +117,11 @@
                         </article> <!-- End of  class="article" -->
 
     <!-- Sidebar -->
-      <aside class="sidebar" role="complementary">
-        <h2>Most Read</h2>
-        <a href="#">
+
+    <aside class="sidebar" role="complementary">
+        <h2>Most Update</h2>
+        <div id="most-update-container">
+            <a href="#">
           <div class="sidebar-headline">
             <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
             <p class="exact-time">13:53h</p>
@@ -153,8 +155,9 @@
             <p class="exact-time">13:53h</p>
           </div>
         </a>
-      
-      </aside> <!-- End of  class="sidebar" -->
+        </div>
+
+    </aside> <!-- End of  class="sidebar" -->
 
     </main> <!-- End of  class="main-article" -->
 
@@ -203,6 +206,31 @@
                 });
             }
 
+            // Mengambil data terbaru dari database melalui AJAX
+            $.ajax({
+                type: "GET",
+                url: "most_update.php",
+                dataType: "json",
+                success: function(response) {
+                // Mengolah dan menampilkan data terbaru di dalam #most-update-container
+                var mostUpdateContainer = $("#most-update-container");
+                mostUpdateContainer.empty();
+
+                // Loop melalui setiap data terbaru dan menambahkannya ke #most-update-container
+                for (var i = 0; i < response.length; i++) {
+                    var headline = response[i].judul;
+                    var time = response[i].tanggal;
+
+                    var html = '<a href="#"><div class="sidebar-headline">';
+                    html += '<h3>' + headline + '</h3>';
+                    html += '<p class="exact-time">' + time + '</p>';
+                    html += '</div></a>';
+
+                    mostUpdateContainer.append(html);
+                }
+                }
+            });
+
             // Mengambil data artikel melalui AJAX
             $.ajax({
                 type: "GET",
@@ -237,6 +265,12 @@
 
             // Menampilkan artikel dengan judul "test2" secara otomatis
             tampilArtikel("Akhirnya Aldi Taher Buatkan Lagu Shanaz dan Rendy");
+        
+        
+        
+        
+        
+        
         });
     </script>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
