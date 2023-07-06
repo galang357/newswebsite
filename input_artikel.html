@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Input Artikel Baru</h2>
-    <form id="input-form">
+    <form id="input-form" enctype="multipart/form-data">
         <label for="tanggal">Tanggal:</label>
         <input type="date" id="tanggal" name="tanggal" ><br><br>
         
@@ -41,21 +41,32 @@
                 var tanggal = $("#tanggal").val();
                 var kategori = $("#kategori").val();
                 var judul = $("#judul").val();
-                var gambar = $("#gambar").val();
+                var gambarFile = $("#gambar")[0].files[0];
                 var konten = $("#konten").val();
-                var gambar2 = $("#gambar2").val();
+                var gambar2File = $("#gambar2")[0].files[0];
                 var konten2 = $("#konten2").val();
                 
+                // Membuat objek FormData untuk mengirim data form dengan gambar
+                var formData = new FormData();
+                formData.append('tanggal', tanggal);
+                formData.append('kategori', kategori);
+                formData.append('judul', judul);
+                formData.append('gambar', gambarFile);
+                formData.append('konten', konten);
+                formData.append('gambar2', gambar2File);
+                formData.append('konten2', konten2);
+
                 // Mengirim permintaan AJAX ke file PHP
                 $.ajax({
                     type: "POST",
                     url: "simpan_artikel.php",
-                    data: {tanggal: tanggal, kategori: kategori, judul: judul, gambar: gambar, konten: konten, gambar2: gambar2, konten2: konten2},
+                    data: formData,
+                    processData: false,
+                    contentType: false,
                     success: function(response) {
                         alert(response);
                         // Menampilkan artikel yang baru saja disimpan setelah sukses menyimpan
-                        tampilArtikel(judul);
-
+                        // tampilArtikel(judul);
                     }
                 });
             });
