@@ -236,6 +236,36 @@
   .toggle .line-3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
+  /* -------------------------------------------------------------
+      SideBar
+     ------------------------------------------------------------- */
+
+  .sidebar-article {
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar-headline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar-headline img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.sidebar-headline h3 {
+    margin: 0;
+}
+
+.sidebar-headline p {
+    margin: 0;
+}
+
   
   /* -------------------------------------------------------------
       Main

@@ -116,48 +116,20 @@
                             </div> <!-- End of  class="form-container" -->
                         </article> <!-- End of  class="article" -->
 
+
     <!-- Sidebar -->
 
-    <aside class="sidebar" role="complementary">
-        <h2>Most Update</h2>
-        <div id="most-update-container">
-            <a href="#">
-          <div class="sidebar-headline">
-            <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
-            <p class="exact-time">13:53h</p>
-          </div>
-        </a>
 
-        <a href="#">
-          <div class="sidebar-headline">
-            <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
-            <p class="exact-time">13:53h</p>
-          </div>
-        </a>
+   <aside class="sidebar" role="complementary">
+    <h2>Most Update</h2>
+    <div id="most-update-container">
+        
+        <!-- Tambahkan elemen <a> lainnya dengan struktur yang sama -->
+    </div>
+</aside>
 
-        <a href="#">
-          <div class="sidebar-headline">
-            <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
-            <p class="exact-time">13:53h</p>
-          </div>
-        </a>
 
-        <a href="#">
-          <div class="sidebar-headline">
-            <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
-            <p class="exact-time">13:53h</p>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="sidebar-headline">
-            <h3>Pariatur laboriosam voluptatum labore tenetur</h3>
-            <p class="exact-time">13:53h</p>
-          </div>
-        </a>
-        </div>
-
-    </aside> <!-- End of  class="sidebar" -->
+    
 
     </main> <!-- End of  class="main-article" -->
 
@@ -207,29 +179,37 @@
             }
 
             // Mengambil data terbaru dari database melalui AJAX
+            function getMostUpdateData() {
+            // Mengambil data terbaru dari database melalui AJAX
             $.ajax({
                 type: "GET",
                 url: "most_update.php",
                 dataType: "json",
                 success: function(response) {
-                // Mengolah dan menampilkan data terbaru di dalam #most-update-container
-                var mostUpdateContainer = $("#most-update-container");
-                mostUpdateContainer.empty();
+                    // Mengolah dan menampilkan data terbaru di dalam #most-update-container
+                    var mostUpdateContainer = $("#most-update-container");
+                    mostUpdateContainer.empty();
 
-                // Loop melalui setiap data terbaru dan menambahkannya ke #most-update-container
-                for (var i = 0; i < response.length; i++) {
-                    var headline = response[i].judul;
-                    var time = response[i].tanggal;
+                    // Loop melalui setiap data terbaru dan menambahkannya ke #most-update-container
+                    for (var i = 0; i < response.length; i++) {
+                        var headline = response[i].judul;
+                        var time = response[i].tanggal;
+                        var gambarURL = response[i].gambar;
 
-                    var html = '<a href="#"><div class="sidebar-headline">';
-                    html += '<h3>' + headline + '</h3>';
-                    html += '<p class="exact-time">' + time + '</p>';
-                    html += '</div></a>';
+                        var html = '<a href="#"><div class="sidebar-headline">';
+                          html +=  '<img src="http://localhost/newswebsite/' + gambarURL + '" alt="Gambar Artikel">';
+                        html += '<h3>' + headline + '</h3>';
+                        html += '<p class="exact-time">' + time + '</p>';
+                        html += '</div></a>';
 
-                    mostUpdateContainer.append(html);
-                }
+                        mostUpdateContainer.append(html);
+                    }
                 }
             });
+        }
+
+        // Memanggil fungsi getMostUpdateData() secara berkala setiap 5 detik
+        setInterval(getMostUpdateData, 5000);
 
             // Mengambil data artikel melalui AJAX
             $.ajax({
@@ -264,9 +244,9 @@
             });
 
             // Menampilkan artikel dengan judul "test2" secara otomatis
-            tampilArtikel("Akhirnya Aldi Taher Buatkan Lagu Shanaz dan Rendy");
-        
-        
+            tampilArtikel("Hewan Ternak Dusun yang Terjangkit Diisolasi, Kondisi Korban Meninggal");
+            getMostUpdateData();
+            
         
         
         
