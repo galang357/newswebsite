@@ -178,6 +178,17 @@
                 });
             }
 
+            // Mendapatkan judul artikel dari localStorage
+            var judulArtikel = localStorage.getItem('judulArtikel');
+
+            // Memanggil fungsi tampilArtikel dengan judul yang diperoleh dari localStorage
+            tampilArtikel(judulArtikel);
+
+            // Menghapus judul artikel dari localStorage setelah digunakan
+            localStorage.removeItem('judulArtikel');
+
+
+
             // Mengambil data terbaru dari database melalui AJAX
             function getMostUpdateData() {
             // Mengambil data terbaru dari database melalui AJAX
@@ -244,7 +255,7 @@
             });
 
             // Menampilkan artikel dengan judul "test2" secara otomatis
-            tampilArtikel("Hewan Ternak Dusun yang Terjangkit Diisolasi, Kondisi Korban Meninggal");
+          //  tampilArtikel("Hewan Ternak Dusun yang Terjangkit Diisolasi, Kondisi Korban Meninggal");
             getMostUpdateData();
             
         
